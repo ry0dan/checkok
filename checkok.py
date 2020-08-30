@@ -15,7 +15,7 @@ start='''
                Coded By Mutawakkil Abduldafe
     '''
 print(colored(start,'magenta'))
-print(colored('   NOTES : your list should be out of https:// at the start of domait because the program adds it automaticly ','yellow'))
+print(colored('   NOTES : your list should be out of https:// at the start of domain because the program adds it automaticly ','yellow'))
 
 # asking filename and output filename
 
@@ -30,7 +30,7 @@ with open (output_file,'w') as o:
 				site= site.strip('\n')
 				sitecolor=colored(site,'cyan')
 				site="https://"+site
-				request = requests.get(site,timeout=5)
+				request = requests.get(site,timeout=3)
 				print(sitecolor,' ==> ',colored(request.status_code,'yellow'))
 				if request.ok == True:
 					site='\n'+site
